@@ -1,13 +1,34 @@
-# React + Vite
+<h1>🎥 YOUTUBE CLONE</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, **React.js** ile geliştirilmiş bir YouTube benzeri video izleme platformudur. Kullanıcılar, video içeriklerini görüntüleyebilir, kanalları keşfedebilir, açıklamaları ve yorumları okuyabilir, farklı kategorilerde içerikler arasında gezinebilir ve arama yapabilirler. Proje içerisinde video kartları, kanal bilgisi, yorum bileşeni, açıklama, önerilen videolar, arama sonuçları, yüklenme ve hata durumları gibi birçok özel bileşen yer almaktadır.
 
-Currently, two official plugins are available:
+<h1>📌 Proje Hakkında</h1>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Kategori tabanlı video listesi (Ana Sayfa)
+- Video detay sayfası (video player + açıklama + yorumlar + kanal bilgisi)
+- Arama sonuçları sayfası (pagination destekli)
+- Önerilen videolar paneli
+- Yükleniyor (Loader) ve hata durumları için özel bileşenler
+- YouTube API (RapidAPI) üzerinden veri çekme
+- Modern UI: Tailwind CSS ile responsive tasarım
 
-## Expanding the ESLint configuration
+<h1>💡 Özellikler / Detaylı Açıklama</h1>
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# YoutubeClone
+* Video Kartları: Thumbnail, başlık, kanal adı, izlenme sayısı, süre.
+
+* Kategori Filtreleme: Sidebar menüsü ile kategoriye göre filtreleme.
+
+* Video Detay: Video oynatıcı + açıklama + kanal + yorumlar + önerilen videolar.
+Yorumlar: Video ile ilgili yorum listesi (API destekliyse).
+
+* Search: Anahtar kelimeye göre arama yapma ve sonuçları listeleme.
+
+* Hata Yönetimi: API kaynaklı hatalarda özel ErrorComponent.
+
+* Yüklenme Durumu: API çağrıları sırasında LoaderComponent.
+
+<h1>🧭 Uygulama Rotaları</h1>
+
+/	      => Ana Sayfa - Kategori bazlı video listesi
+/watch?v=videoId => Video Detay Sayfası
+/results?search_query=abc =>	Arama Sonuçları
